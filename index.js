@@ -38,3 +38,4 @@ function onFieldClick(event) {
 }
 
 field.addEventListener('click', onFieldClick);
+
