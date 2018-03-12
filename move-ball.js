@@ -1,33 +1,33 @@
-const ball = document.querySelector('.ball');
+const square = document.querySelector('.square');
 
-ball.onmousedown = function(e) {
+square.onmousedown = function(e) {
 
-    let coords = getCoords(ball);
+    let coords = getCoords(square);
     let shiftX = e.pageX - coords.left;
     let shiftY = e.pageY - coords.top;
 
 
-    ball.style.position = 'absolute';
+    square.style.position = 'absolute';
     moveAt(e);
-    document.body.appendChild(ball);
+    document.body.appendChild(square);
 
-    ball.style.zIndex = 1000;
+    square.style.zIndex = 1000;
 
     function moveAt(e) {
-        ball.style.left = e.pageX - shiftX + 'px';
-        ball.style.top = e.pageY - shiftY + 'px';
+        square.style.left = e.pageX - shiftX + 'px';
+        square.style.top = e.pageY - shiftY + 'px';
     }
 
     document.onmousemove = function(e) {
         moveAt(e);
     };
 
-    ball.onmouseup = function() {
+    square.onmouseup = function() {
         document.onmousemove = null;
-        ball.onmouseup = null;
+        square.onmouseup = null;
     };
 
-    ball.ondragstart = function() {
+    square.ondragstart = function() {
         return false;
     };
 };

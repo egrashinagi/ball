@@ -1,4 +1,4 @@
-const field = document.querySelector('.field');
+const field = document.querySelectorAll('.field');
 const ball = field.querySelector('.ball');
 
 const coordsField = field.getBoundingClientRect();

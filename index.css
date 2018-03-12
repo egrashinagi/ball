@@ -3,11 +3,13 @@ body {
 }
 
 .field {
-    position: relative;
-    overflow: hidden;
+    display: flex;
 
-    width: 400px;
-    height: 200px;
+    position: relative;
+    /*overflow: hidden;*/
+
+    /*width: 400px;*/
+    /*height: 200px;*/
 
     /*border: 1px solid black;*/
     /*background-color: #fdffa1;*/
@@ -26,4 +28,16 @@ body {
 
 .points {
     color: #ff3636;
+}
+
+.square {
+    /*position: absolute;*/
+
+    height: 100px;
+    width: 100px;
+
+    background-color: #4471ff;
+    border: 1px solid whitesmoke;
+
+    cursor: pointer;
 }
