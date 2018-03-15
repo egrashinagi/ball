@@ -18,7 +18,7 @@ square.addEventListener('onmousedown', (e)=> {
     }
 
     document.addEventListener('onmousemove', (e)=> {
-        moveAt(e);
+        moveAt(e)
     });
 
     square.addEventListener('onmouseup',()=> {
@@ -31,9 +31,9 @@ square.addEventListener('onmousedown', (e)=> {
         square.onmouseup = null;
     });
 
-    square.addEventListener('ondragstart', ()=> {
+    square.ondragstart =  function() {
         return false;
-    })
+    };
 });
 
 function getCoords(elem) {
