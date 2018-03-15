@@ -6,8 +6,7 @@ square.addEventListener('onmousedown', (e)=> {
     let shiftX = e.pageX - coords.left;
     let shiftY = e.pageY - coords.top;
 
-
-    square.style.position = 'absolute';
+    square.classList.add('position');
     moveAt(e);
     document.body.appendChild(square);
 
@@ -18,9 +17,9 @@ square.addEventListener('onmousedown', (e)=> {
         square.style.top = e.pageY - shiftY + 'px';
     }
 
-    document.onmousemove = (e)=> {
+    document.addEventListener('onmousemove', (e)=> {
         moveAt(e);
-    };
+    });
 
     square.addEventListener('onmouseup',()=> {
         document.onmousemove = null;
